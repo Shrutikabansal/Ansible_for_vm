@@ -9,3 +9,16 @@
            name: centos
            command: start
 
+
+#---
+#- name: first
+#  hosts: all
+#  user: root
+#  become: true
+#  tasks:
+#    - name: poweroff
+#      virt:
+#          name: root
+#          state: shutdown
+
+#this one wasn't working because name root is wrong name of vm was centos and instead of state i had to use command
