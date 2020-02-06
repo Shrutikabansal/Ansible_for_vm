@@ -1,0 +1,11 @@
+---
+- name: first
+  hosts: localhost
+  user: root
+  become: true
+  tasks:
+    - name: poweron
+      virt:
+           name: centos
+           command: start
+

@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  connection: localhost
+  gather_facts: no
+  tasks:
+  - name: stop VM
+    virt:
+      command: shutdown
+      name: centos
