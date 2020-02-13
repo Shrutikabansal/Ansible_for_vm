@@ -1,0 +1,10 @@
+---
+ 
+- hosts: veda_laptop
+  tasks:
+    - name: hostname_veda_user
+      command: hostname
+      register: hostn_veda_user
+    - debug:
+         var: hostn_veda_user.stdout
+
