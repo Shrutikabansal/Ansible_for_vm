@@ -1,0 +1,14 @@
+---
+
+- hosts: centos_ansible
+  - hostname:
+       name: shruti_ansible
+
+
+- hosts: centos_ansible
+  tasks:
+    - name: print host name
+      command: hostname
+      register: hostName
+    - debug:
+         var: hostName.stdout
